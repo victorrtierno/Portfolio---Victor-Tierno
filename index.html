@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio personal de Víctor, estudiante de desarrollo Full Stack.">
+    <meta name="author" content="Víctor">
+    
+    <title>Portafolio | Víctor</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Víctor<span>.Dev</span></div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="inicio" class="seccion-inicio">
+            <div class="contenido-inicio">
+                <h1>Hola, soy Víctor. <br>Y soy un futuro desarrollador <span class="texto-acento">Full Stack</span>.</h1>
+                <p>Actualmente formándome en tecnologías web, construyendo lógica sólida en el backend y diseños limpios en el frontend.</p>
+                <a href="#portafolio" class="btn-principal">Ver mis proyectos</a>
+            </div>
+        </section>
+
+        <section id="sobre-mi">
+            <h2 class="titulo-seccion">Sobre Mí</h2>
+            <p class="texto-destacado">Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM) y Ciberseguridad | ThePower | Futuro desarrollador Full Stack.</p>
+            <p>Me encanta transformar ideas en proyectos funcionales, trabajando tanto en la lógica de servidor como en la interfaz de usuario. Mi objetivo actual es dominar HTML, CSS y Java para crear aplicaciones completas, intuitivas y eficientes. ¡Siempre dispuesto a afrontar un nuevo reto de código!</p>
+        </section>
+
+        <section id="portafolio">
+            <h2 class="titulo-seccion">Mis Proyectos Destacados</h2>
+            <div class="cuadricula-proyectos">
+                
+                <article class="tarjeta-proyecto">
+                    <div class="contenedor-imagen">
+                         <img src="img/img1.jpg" alt="Imagen proyecto 1">
+                    </div>
+                    <div class="contenido-tarjeta">
+                        <h3>Sistema de Gestión (Java)</h3>
+                        <p>Aplicación de escritorio desarrollada en Java orientada a objetos para administrar el inventario y usuarios de una tienda ficticia.</p>
+                    </div>
+                </article>
+
+                <article class="tarjeta-proyecto">
+                    <div class="contenedor-imagen">
+                        <img src="img/img2.jpg" alt="Imagen proyecto 2">
+                    </div>
+                    <div class="contenido-tarjeta">
+                        <h3>Landing Page Responsiva</h3>
+                        <p>Maquetación web utilizando únicamente HTML5 y CSS3 moderno (Flexbox y Grid) asegurando adaptabilidad en dispositivos móviles.</p>
+                    </div>
+                </article>
+
+                <article class="tarjeta-proyecto">
+                    <div class="contenedor-imagen">
+                        <img src="https://via.placeholder.com/600x400/1a1a1a/d4af37?text=Bases+de+Datos" alt="Esquema de Base de Datos">
+                    </div>
+                    <div class="contenido-tarjeta">
+                        <h3>Diseño Relacional SQL</h3>
+                        <p>Creación, normalización y consultas estructuradas de una base de datos para un sistema de reservas de una biblioteca.</p>
+                    </div>
+                </article>
+
+                <article class="tarjeta-proyecto">
+                    <div class="contenedor-imagen">
+                        <img src="https://via.placeholder.com/600x400/1a1a1a/c5a059?text=Blog+Personal" alt="Captura del blog personal">
+                    </div>
+                    <div class="contenido-tarjeta">
+                        <h3>Blog de Diseño Web</h3>
+                        <p>Sitio web personal estructurado de forma semántica y accesible para compartir artículos sobre tecnología y aprendizaje.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="contacto" class="seccion-contacto">
+            <h2 class="titulo-seccion">Contáctame</h2>
+            <form action="#" method="POST" class="formulario-moderno">
+                <div class="grupo-formulario">
+                    <label for="nombre">Tu Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana García" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="email">Tu Email</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué te puedo ayudar?" required></textarea>
+                </div>
+                <button type="submit" class="btn-principal btn-ancho-completo">Enviar Mensaje</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="logo">Víctor<span>.Dev</span></div>
+        <p>&copy; 2026. Todos los derechos reservados.</p>
+        <div class="redes-sociales">
+            <a href="#">GitHub</a> / 
+            <a href="https://www.linkedin.com/in/victortierno" target="_blank">LinkedIn</a> / 
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,302 @@
+/* =========================================
+    RESET & CONFIGURACIÓN BASE
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Animación */
+    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en el menú */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000000; 
+    color: #ffffff;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* =========================================
+    ESTILOS DE TEXTO
+   ========================================= */
+h1, h2, h3 {
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* Utilizo las unidades rem ya que si el usuario configura su navegador
+para que las letras sean mas grandes, las unidades rem creceran
+en proporcion automaticamente en cambio si pongo px este texto
+no aumentaria de tamaño. */
+h1 { font-size: 3rem; }
+h2 { font-size: 2.2rem; }
+
+/* Color dorado para destacar palabras */
+.texto-acento {
+    color: #e6b800;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* =========================================
+    ESTRUCTURA GENERAL
+   ========================================= */
+section {
+    padding: 100px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =========================================
+     BOTONES
+   ========================================= */
+.btn-principal {
+    display: inline-block;
+    padding: 14px 36px;
+    background-color: transparent;
+    color: #e6b800; /* Texto dorado */
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid #e6b800; /* Borde dorado */
+    border-radius: 4px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    transition: all 0.3s ease; /* Animación suave */
+}
+
+.btn-principal:hover {
+    background-color: #e6b800;
+    color: #000000; /* Al pasar el ratón, fondo dorado y texto negro */
+}
+
+/* =========================================
+     HEADER & NAVEGACIÓN (FLEXBOX)
+   ========================================= */
+header {
+    background-color: #0a0a0a; /* Fondo gris muy oscuro */
+    padding: 20px 24px;
+    border-bottom: 1px solid #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* Mantiene el menú arriba al hacer scroll */
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.logo span { 
+    color: #e6b800; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex; /* Flexbox para poner los enlaces en línea */
+    gap: 30px; 
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav a:hover { 
+    color: #e6b800; 
+}
+
+/* =========================================
+     SECCIÓN INICIO (HERO)
+   ========================================= */
+.seccion-inicio {
+    padding: 150px 24px 100px;
+    text-align: center;
+}
+
+.contenido-inicio p {
+    font-size: 1.2rem;
+    color: #b3b3b3; /* Texto secundario gris */
+    max-width: 600px;
+    margin: 20px auto 30px;
+}
+
+/* =========================================
+     SECCIÓN SOBRE MÍ
+   ========================================= */
+#sobre-mi {
+    text-align: center;
+    max-width: 800px;
+}
+
+.texto-destacado {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#sobre-mi p {
+    color: #b3b3b3;
+}
+
+/* =========================================
+     PORTAFOLIO 
+   ========================================= */
+.cuadricula-proyectos {
+    display: grid;
+    /* Grid adaptable: mínimo 280px por tarjeta */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.tarjeta-proyecto {
+    background-color: #0a0a0a;
+    border-radius: 8px;
+    border: 1px solid #333333;
+    transition: all 0.3s ease; /* Prepara la animación */
+    cursor: pointer;
+}
+
+.tarjeta-proyecto:hover {
+    transform: translateY(-8px); /* Eleva la tarjeta */
+    border-color: #e6b800; /* Borde dorado */
+    box-shadow: 0 10px 20px rgba(230, 184, 0, 0.2); /* Sombra luminosa */
+}
+
+.contenedor-imagen img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* Evita que la imagen se deforme */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.contenido-tarjeta {
+    padding: 24px;
+}
+
+.contenido-tarjeta h3 { 
+    font-size: 1.2rem; 
+    margin-bottom: 10px; 
+    color: #e6b800;
+}
+
+.contenido-tarjeta p { 
+    color: #b3b3b3; 
+    font-size: 0.95rem; 
+}
+
+/* =========================================
+     CONTACTO & FORMULARIO
+   ========================================= */
+.seccion-contacto {
+    background-color: #0a0a0a;
+    margin-top: 50px;
+    border-top: 1px solid #333333;
+}
+
+.formulario-moderno {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.grupo-formulario { 
+    margin-bottom: 20px; 
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 8px;
+    color: #b3b3b3;
+}
+
+.grupo-formulario input, 
+.grupo-formulario textarea {
+    width: 100%;
+    padding: 14px;
+    background-color: #000000;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+/* Ilumina el borde de dorado cuando estás escribiendo */
+.grupo-formulario input:focus, 
+.grupo-formulario textarea:focus {
+    outline: none;
+    border-color: #e6b800;
+}
+
+.btn-ancho-completo { 
+    width: 100%; 
+}
+
+/* =========================================
+     FOOTER
+   ========================================= */
+footer {
+    background-color: #0a0a0a;
+    text-align: center;
+    padding: 50px 20px;
+    border-top: 1px solid #333333;
+    color: #b3b3b3;
+}
+
+.redes-sociales {
+    margin-top: 20px;
+}
+
+.redes-sociales a {
+    color: #b3b3b3;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.redes-sociales a:hover { 
+    color: #e6b800; 
+}
+
+/* =========================================
+     DISEÑO RESPONSIVO (MEDIA QUERIES)
+   ========================================= */
+@media (max-width: 768px) {
+    h1 { 
+        font-size: 2.2rem; 
+    }
+    
+    header {
+        flex-direction: column; /* Cambiamos a columna en móviles */
+        padding: 15px;
+    }
+
+    nav ul {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    section { 
+        padding: 60px 20px; 
+    }
+    
+    .seccion-inicio { 
+        padding-top: 100px; 
+    }
+}
