@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Festival - Panel Principal</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+
+  <body class="tema-oscuro">
+    
+    <div class="cinta-noticias">
+      <div class="cinta-texto"> 
+        PU7O PERREO 2026 • ABONOS YA A LA VENTA • PU7O PERREO 2026 • ABONOS YA A LA VENTA • PU7O PERREO 2026 • ABONOS YA A LA VENTA • PU7O PERREO 2026 • ABONOS YA A LA VENTA • 
+      </div>
+    </div>
+
+    <div class="contenedor-general">
+      <div class="cont-sec">
+        
+        <header class="cabecera-top">
+          <h1 class="titulo-principal">Artistas</h1>
+          <div class="opciones-top">
+            
+            <div class="grupo-tema">
+              <button id="btn-tema-oscuro" class="btn-tema izq">Oscuro</button>
+              <button id="btn-tema-claro" class="btn-tema centro">Claro</button>
+              <button id="btn-tema-personalizado" class="btn-tema der">Personalizado</button>
+            </div>
+
+            <button id="btn-volver">⬅ Volver</button>
+          </div>
+        </header>
+
+        <div class="seccion-busqueda">
+          <input type="text" id="input-buscar" placeholder="Buscar por título..." />
+          <button id="btn-buscar">Buscar</button>
+          <button id="btn-añadir-cabecera">+ Añadir Tarjeta</button>
+        </div>
+
+        <main id="contenedor-tarjetas"></main>
+
+        <footer class="pie-pagina">
+          <p>PROYECTO 2EV GRUPO Alfonso y Víctor</p>
+          <p>&copy; 2026 PU7O PERREO FESTIVAL. Todos los derechos reservados.</p>
+        </footer>
+
+      </div>
+    </div>
+
+    <div id="ventana-modal-tarjeta" class="ventana-modal">
+      <div class="modal-contenido">
+        <h2>Añadir Tarjeta</h2>
+        <input type="text" id="input-titulo-tarjeta" placeholder="Título" />
+        <textarea id="input-descripcion-tarjeta" placeholder="Descripción"></textarea>
+        <input type="file" id="input-imagen-tarjeta" />
+        <button id="btn-guardar-tarjeta">Guardar</button>
+        <button id="btn-cerrar-modal-tarjeta">Cerrar</button>
+      </div>
+    </div>
+    
+    <div id="ventana-modal-tema" class="ventana-modal">
+      <div class="modal-contenido">
+        <h2>Personalizar Tema</h2>
+        <label for="input-color-fondo">Fondo:</label>
+        
+        <input type="color" id="input-color-fondo" />
+        
+        <button id="btn-aceptar-tema">Aceptar</button>
+      </div>
+    </div>
+
+    <div id="ventana-modal-info" class="ventana-modal">
+      <div class="modal-contenido">
+        <h2 id="info-titulo">Nombre</h2>
+        <img id="info-imagen" src="" alt="Foto artista" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; border: 2px solid #00f0ff; margin-bottom: 10px;">
+        <p id="info-descripcion" style="color: #ccc; line-height: 1.5; margin-bottom: 15px; text-align: justify;"></p>
+        
+        <audio id="info-audio" controls style="width: 100%; margin-bottom: 20px; outline: none; border-radius: 25px;">
+            Tu navegador no soporta el audio.
+        </audio>
+        <button id="btn-cerrar-info">Cerrar</button>
+      </div>
+    </div>
+
+    <script src="script/script.js"></script>
+  </body>
+</html>

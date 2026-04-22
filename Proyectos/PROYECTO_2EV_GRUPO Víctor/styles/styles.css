@@ -1,0 +1,388 @@
+/* =========================================================
+   ANIMACIONES
+   ========================================================= */
+/* Animaciones hechas con IA*/
+@keyframes aparecerDesdeAbajo {
+    0% { opacity: 0; transform: translateY(50px); } 
+    100% { opacity: 1; transform: translateY(0); } 
+}
+
+/* Mueve el texto de lado a lado para crear el efecto de rotar */
+@keyframes moverCinta {
+    0% { transform: translateX(100vw); }   
+    100% { transform: translateX(-100%); } 
+}
+
+/* =========================================================
+   RESETEO Y BASE
+   ========================================================= */
+
+/* hace que los bordes y paddings no engorden el tamaño total de las cajas */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif; 
+    color: #f5f5f5; 
+}
+
+/* Lo mandamos al fondo del todo (z-index negativo) y lo oscurecemos para que el texto resalte */
+.video-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; 
+    height: 100vh; 
+    object-fit: cover; 
+    object-position: center; 
+    z-index: -1; 
+    filter: brightness(0.4); 
+}
+
+/* =========================================================
+   CINTA NOTICIAS (MARQUESINA)
+   ========================================================= */
+
+.cinta-noticias {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #00f0ff, #00f0ff); 
+    color: #000; 
+    padding: 10px 0;
+    overflow: hidden; /* Cortamos lo que se sale del ancho de la pantalla */
+    white-space: nowrap; /* Forzamos a que el texto no salte a la línea de abajo */
+    z-index: 100; 
+    border-bottom: 2px solid #fff;
+}
+
+.cinta-texto {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: moverCinta 15s linear infinite; 
+}
+
+/* =========================================================
+   PANTALLA DE INICIO (LOGIN)
+   ========================================================= */
+
+.pantalla-inicio {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 30px; 
+}
+
+.titulo-festival {
+    font-size: 70px;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 10px #00eeff, 0 0 20px #ff007f, 0 0 40px #00b7ff; /* Efecto neón apilando sombras */
+    text-align: center;
+    z-index: 1; 
+    animation: aparecerDesdeAbajo 1s ease-out; 
+}
+
+/* Contenedor con efecto cristal (blur) */
+.contenedor-inicio {
+    border: 3px solid #00f0ff;
+    border-radius: 5%;
+    background: rgba(26, 26, 26, 0.85); 
+    backdrop-filter: blur(5px); 
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px; 
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.5); 
+    z-index: 1;
+    animation: aparecerDesdeAbajo 1s ease-out 0.2s backwards; 
+}
+
+.contenedor-inicio h2 {
+    margin-bottom: 25px;
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px #00f0ff; 
+}
+
+.caja-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 85%;
+}
+
+.caja-formulario input {
+    border: 2px solid #00f0ff; 
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: #f5f5f5;
+    padding: 12px;
+    outline: none;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.caja-formulario input:focus {
+    border-color: #ff007f; 
+    box-shadow: 0 0 10px #ff007f;
+}
+
+/* =========================================================
+   MAIN: ESTRUCTURA GENERAL Y LAYOUT
+   ========================================================= */
+
+.tema-oscuro {
+    background-color: #0a0a0a; 
+    display: flex;
+    justify-content: center;
+    min-height: 100vh; 
+}
+
+/* Ocupa el alto de la pantalla restando los 90px que mide la cinta de noticias */
+.contenedor-general {
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 90px);
+}
+
+/* Obligamos a este contenedor a estirarse para rellenar el espacio vacío (clave para empujar el footer) */
+.cont-sec {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1; 
+}
+
+/* =========================================================
+   CABECERA Y BUSCADOR
+   ========================================================= */
+
+.cabecera-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    border-bottom: 2px solid #ff007f; 
+    padding: 15px 20px;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0px 4px 15px -3px #000;
+}
+
+.titulo-principal {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 10px #00eeff, 0 0 20px #ff0080a5; 
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.opciones-top {
+    display: flex;
+    gap: 15px;
+}
+
+.opciones-top select {
+    background-color: #0a0a0a;
+    border: 1px solid #00f0ff; 
+    color: #f5f5f5;
+    padding: 8px 12px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.seccion-busqueda {
+    display: flex;
+    gap: 10px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-bottom: 2px solid #00f0ff; 
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 30px;
+    justify-content: center; 
+}
+
+/* Flex-grow 1 hace que la barra de búsqueda se estire todo lo que pueda, absorbiendo el espacio libre */
+.seccion-busqueda input {
+    flex-grow: 1; 
+    max-width: 600px;
+    background-color: #0a0a0a;
+    border: 1px solid #00f0ff;
+    color: #f5f5f5;
+    padding: 10px 15px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.seccion-busqueda input:focus {
+    border-color: #ff007f;
+}
+
+/* =========================================================
+   BOTONES Y TARJETAS
+   ========================================================= */
+
+button {
+    background-color: #00f0ff; 
+    color: #000;
+    border: 2px solid #000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #ff007f; 
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Magia de CSS Grid: las tarjetas se adaptan al ancho solas, sin necesidad de usar media queries */
+#contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.tarjeta-item {
+    background-color: #1a1a1a;
+    border: 2px solid #00f0ff; 
+    border-radius: 12px; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    margin: 15px;
+}
+
+.tarjeta-item:hover {
+    transform: translateY(-5px); 
+    border-color: #ff007f; 
+    box-shadow: 0 5px 15px rgba(255, 0, 127, 0.4);
+}
+
+.tarjeta-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.tarjeta-item h3 {
+    width: 100%;
+    text-align: left;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ff007f; 
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px #00f0ff;
+}
+
+.tarjeta-item p {
+    width: 100%;
+    text-align: left;
+    font-size: 0.85em;
+    color: #ccc;
+    line-height: 1.4;
+}
+
+/* =========================================================
+   MODALES (POPUPS) Y PIE DE PÁGINA
+   ========================================================= */
+
+/* position: fixed y z-index gigante para asegurar que la capa superpone a todo el contenido de la web */
+.ventana-modal {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+
+.modal-contenido {
+    background-color: #1a1a1a;
+    border: 3px solid #ff007f;
+    border-radius: 10px;
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 0 20px rgba(255, 0, 127, 0.5);
+}
+
+.modal-contenido h2 {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 8px #ff007f;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.modal-contenido input[type="text"], 
+.modal-contenido textarea {
+    background-color: #0a0a0a;
+    border: 1px solid #ff007f; 
+    color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+}
+
+.modal-contenido input[type="text"]:focus, 
+.modal-contenido textarea:focus {
+    border-color: #00f0ff; 
+}
+               
+.modal-contenido textarea {
+    resize: vertical; 
+    min-height: 80px;
+}
+
+.modal-contenido label {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* El margen superior automático es el truco para que el footer se quede siempre pegado abajo */
+.pie-pagina {
+    margin-top: auto; 
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-size: small;
+    color: #00eeff;
+    text-align: center;
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<festival>
+
+    <artista>
+        <titulo>Kidd Keo</titulo>
+        <descripcion>Kidd Keo es uno de los mayores exponentes del trap en España, conocido por mezclar español e inglés en sus letras y por su estilo único.</descripcion>
+        <img>img/img1.jpg</img>
+        <audio>audio/Keo.mp3</audio>
+    </artista>
+
+    <artista>
+        <titulo>Anuel AA</titulo>
+        <descripcion>EL DIOS DEL TRAP   Pionero del trap latino y el regguetón. Sus conciertos están llenos de energía, pirotecnia y clásicos que todo el mundo canta a pulmón.</descripcion>
+        <img>img/img2.jpg</img>
+        <audio>audio/Anuel2.mp3</audio>
+    </artista>
+
+    <artista>
+        <titulo>RVFV</titulo>
+        <descripcion>Artista almeriense que ha revolucionado la escena urbana con su mezcla de regguetón, trap y ritmos africanos (afrotrap).</descripcion>
+        <img>img/img3.jpg</img>
+        <audio>audio/rvfv.mp3</audio>
+    </artista>
+
+    <artista>
+        <titulo>Bad Bunny</titulo>
+        <descripcion>El Conejo Malo, ícono mundial del reggaetón y trap latino, conocido por sus éxitos globales y su capacidad para romper moldes en la industria urbana.</descripcion>
+        <img>img/img4.jpg</img>
+        <audio>audio/Bad Bunny.mp3</audio>
+    </artista>
+
+    <artista>
+        <titulo>Ozuna</titulo>
+        <descripcion>El Negrito de Ojos Claros, superestrella puertorriqueña con una voz melódica inconfundible y una auténtica máquina de crear himnos del reggaetón.</descripcion>
+        <img>img/img5.jpg</img>
+        <audio>audio/Ozuna.mp3</audio>
+    </artista>
+
+    <artista>
+        <titulo>Rosalía</titulo>
+        <descripcion>La Motomami que ha redefinido el panorama musical global fusionando sus raíces flamencas con ritmos urbanos, pop y sonidos experimentales.</descripcion>
+        <img>img/img6.jpg</img>
+        <audio>audio/Rosalia.mp3</audio>
+    </artista>
+
+    <artista>
+        <titulo>Dua Lipa</titulo>
+        <descripcion>Superestrella del pop famosa por sus influencias disco, voz poderosa y actuaciones cautivadoras llenas de éxitos internacionales.</descripcion>
+        <img>img/img7.jpg</img>
+        <audio>audio/Dua Lipa.mp3</audio>
+    </artista>
+
+</festival>

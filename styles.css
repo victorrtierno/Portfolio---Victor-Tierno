@@ -199,6 +199,12 @@ nav a:hover {
     font-size: 0.95rem; 
 }
 
+.enlace-tarjeta {
+    text-decoration: none; /* Esto quita la línea azul del subrayado */
+    color: inherit;        /* Esto hace que el texto deje de ser azul y herede el color (blanco/gris) que ya le habías dado a la tarjeta */
+    display: block;        /* Asegura que el área donde puedes hacer clic ocupe toda la tarjeta */
+}
+
 /* =========================================
      CONTACTO & FORMULARIO
    ========================================= */
