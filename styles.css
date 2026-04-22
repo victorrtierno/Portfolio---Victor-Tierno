@@ -279,6 +279,14 @@ footer {
 }
 
 /* =========================================
+   SEPARADORES DE SECCIONES
+   ========================================= */
+#inicio, 
+#sobre-mi {
+    border-bottom: 1px solid #333333;
+}
+
+/* =========================================
      DISEÑO RESPONSIVO (MEDIA QUERIES)
    ========================================= */
 @media (max-width: 768px) {
