@@ -292,8 +292,26 @@ footer {
     h1 { font-size: 2.5rem; }
     .titulo-seccion { font-size: 1.8rem; }
     
-    header { flex-direction: column; padding: 20px; text-align: center; }
-    nav ul { margin-top: 20px; gap: 15px; flex-direction: column; padding: 0; }
+    header { 
+        flex-direction: column; 
+        padding: 20px; 
+        text-align: center; 
+    }
+    
+    nav ul { 
+        margin-top: 15px; 
+        display: flex;
+        flex-direction: row; /* Mantiene los enlaces en horizontal */
+        flex-wrap: wrap; /* Permite que bajen de línea si la pantalla es enana, pero sin aplastarse */
+        justify-content: center;
+        gap: 15px 20px; /* Espaciado ajustado */
+        padding: 0; 
+    }
+
+    nav a {
+        font-size: 0.85rem; /* Letra un poco más pequeña para que quepan todos */
+        white-space: nowrap; /* Evita que "SOBRE MÍ" se parta en dos líneas */
+    }
     
     section { padding: 80px 20px; }
     .seccion-inicio { padding-top: 120px; }
