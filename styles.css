@@ -284,13 +284,51 @@ footer {
 }
 
 /* =========================================
-     DISEÑO RESPONSIVO
+     DISEÑO RESPONSIVO (MÓVILES Y TABLETS)
    ========================================= */
+
+/* Para pantallas tamaño tablet o móviles grandes */
 @media (max-width: 768px) {
     h1 { font-size: 2.5rem; }
-    header { flex-direction: column; padding: 20px; }
-    nav ul { margin-top: 20px; gap: 15px; }
+    .titulo-seccion { font-size: 1.8rem; }
+    
+    header { flex-direction: column; padding: 20px; text-align: center; }
+    nav ul { margin-top: 20px; gap: 15px; flex-direction: column; padding: 0; }
+    
     section { padding: 80px 20px; }
     .seccion-inicio { padding-top: 120px; }
-    .cuadricula-proyectos { grid-template-columns: 1fr; }
+    
+    .cuadricula-proyectos { 
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+    
+    .contenedor-imagen img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .formulario-moderno {
+        width: 100%;
+        padding: 15px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
+
+/* Para pantallas de móviles más pequeños */
+@media (max-width: 480px) {
+    h1 { font-size: 2rem; }
+    
+    /* Hace que los botones ocupen todo el ancho y sean más fáciles de tocar */
+    .btn-principal {
+        display: block;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
 }
