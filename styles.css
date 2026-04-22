@@ -8,8 +8,7 @@
 }
 
 html {
-    /* Animación */
-    scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en el menú */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -28,28 +27,23 @@ h1, h2, h3 {
     line-height: 1.2;
 }
 
-/* Utilizo las unidades rem ya que si el usuario configura su navegador
-para que las letras sean mas grandes, las unidades rem creceran
-en proporcion automaticamente en cambio si pongo px este texto
-no aumentaria de tamaño. */
-h1 { font-size: 3rem; }
-h2 { font-size: 2.2rem; }
+h1 { font-size: 3.5rem; } /* Aumentado ligeramente */
+h2 { font-size: 2.5rem; } /* Aumentado ligeramente */
 
-/* Color dorado para destacar palabras */
 .texto-acento {
     color: #e6b800;
 }
 
 .titulo-seccion {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 /* =========================================
     ESTRUCTURA GENERAL
    ========================================= */
 section {
-    padding: 100px 24px;
+    padding: 140px 24px; /* Secciones más altas para dar aire y profundidad */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -59,34 +53,34 @@ section {
    ========================================= */
 .btn-principal {
     display: inline-block;
-    padding: 14px 36px;
+    padding: 16px 40px;
     background-color: transparent;
-    color: #e6b800; /* Texto dorado */
+    color: #e6b800;
     text-decoration: none;
     font-weight: 600;
-    border: 2px solid #e6b800; /* Borde dorado */
+    border: 2px solid #e6b800;
     border-radius: 4px;
-    margin-top: 20px;
+    margin-top: 24px;
     text-transform: uppercase;
-    transition: all 0.3s ease; /* Animación suave */
+    transition: all 0.3s ease;
 }
 
 .btn-principal:hover {
     background-color: #e6b800;
-    color: #000000; /* Al pasar el ratón, fondo dorado y texto negro */
+    color: #000000;
 }
 
 /* =========================================
-     HEADER & NAVEGACIÓN (FLEXBOX)
+     HEADER & NAVEGACIÓN
    ========================================= */
 header {
-    background-color: #0a0a0a; /* Fondo gris muy oscuro */
+    background-color: #0a0a0a;
     padding: 20px 24px;
     border-bottom: 1px solid #333333;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky; /* Mantiene el menú arriba al hacer scroll */
+    position: sticky;
     top: 0;
     z-index: 100;
 }
@@ -97,14 +91,12 @@ header {
     text-transform: uppercase;
 }
 
-.logo span { 
-    color: #e6b800; 
-}
+.logo span { color: #e6b800; }
 
 nav ul {
     list-style: none;
-    display: flex; /* Flexbox para poner los enlaces en línea */
-    gap: 30px; 
+    display: flex;
+    gap: 35px; 
 }
 
 nav a {
@@ -112,25 +104,25 @@ nav a {
     text-decoration: none;
     text-transform: uppercase;
     transition: color 0.3s ease;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
 }
 
-nav a:hover { 
-    color: #e6b800; 
-}
+nav a:hover { color: #e6b800; }
 
 /* =========================================
      SECCIÓN INICIO (HERO)
    ========================================= */
 .seccion-inicio {
-    padding: 150px 24px 100px;
+    padding: 180px 24px 140px;
     text-align: center;
 }
 
 .contenido-inicio p {
-    font-size: 1.2rem;
-    color: #b3b3b3; /* Texto secundario gris */
-    max-width: 600px;
-    margin: 20px auto 30px;
+    font-size: 1.3rem;
+    color: #b3b3b3;
+    max-width: 700px;
+    margin: 25px auto 35px;
 }
 
 /* =========================================
@@ -138,18 +130,20 @@ nav a:hover {
    ========================================= */
 #sobre-mi {
     text-align: center;
-    max-width: 800px;
+    max-width: 900px; /* Más ancho para llenar la pantalla */
 }
 
 .texto-destacado {
-    font-size: 1.4rem;
+    font-size: 1.6rem; /* Texto de impacto más grande */
     font-weight: 400;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: #ffffff;
 }
 
 #sobre-mi p {
     color: #b3b3b3;
+    font-size: 1.15rem; /* Lectura más cómoda y profesional */
+    margin-bottom: 20px;
 }
 
 /* =========================================
@@ -157,52 +151,52 @@ nav a:hover {
    ========================================= */
 .cuadricula-proyectos {
     display: grid;
-    /* Grid adaptable: mínimo 280px por tarjeta */
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
+    /* Tarjetas más grandes para que se vea más lleno */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 45px;
 }
 
 .tarjeta-proyecto {
     background-color: #0a0a0a;
-    border-radius: 8px;
+    border-radius: 12px;
     border: 1px solid #333333;
-    transition: all 0.3s ease; /* Prepara la animación */
+    transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .tarjeta-proyecto:hover {
-    transform: translateY(-8px); /* Eleva la tarjeta */
-    border-color: #e6b800; /* Borde dorado */
-    box-shadow: 0 10px 20px rgba(230, 184, 0, 0.2); /* Sombra luminosa */
+    transform: translateY(-10px);
+    border-color: #e6b800;
+    box-shadow: 0 15px 30px rgba(230, 184, 0, 0.15);
 }
 
 .contenedor-imagen img {
     width: 100%;
-    height: 220px;
-    object-fit: cover; /* Evita que la imagen se deforme */
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    height: 250px; /* Imagen más alta */
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }
 
 .contenido-tarjeta {
-    padding: 24px;
+    padding: 30px;
 }
 
 .contenido-tarjeta h3 { 
-    font-size: 1.2rem; 
-    margin-bottom: 10px; 
+    font-size: 1.4rem; 
+    margin-bottom: 12px; 
     color: #e6b800;
 }
 
 .contenido-tarjeta p { 
     color: #b3b3b3; 
-    font-size: 0.95rem; 
+    font-size: 1rem; 
 }
 
 .enlace-tarjeta {
-    text-decoration: none; /* Esto quita la línea azul del subrayado */
-    color: inherit;        /* Esto hace que el texto deje de ser azul y herede el color (blanco/gris) que ya le habías dado a la tarjeta */
-    display: block;        /* Asegura que el área donde puedes hacer clic ocupe toda la tarjeta */
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 /* =========================================
@@ -210,47 +204,41 @@ nav a:hover {
    ========================================= */
 .seccion-contacto {
     background-color: #0a0a0a;
-    margin-top: 50px;
     border-top: 1px solid #333333;
 }
 
 .formulario-moderno {
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
-.grupo-formulario { 
-    margin-bottom: 20px; 
-}
+.grupo-formulario { margin-bottom: 25px; }
 
 .grupo-formulario label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     color: #b3b3b3;
 }
 
 .grupo-formulario input, 
 .grupo-formulario textarea {
     width: 100%;
-    padding: 14px;
+    padding: 16px;
     background-color: #000000;
-    border: 1px solid #333333;
-    border-radius: 4px;
+    border: 1px solid #444444;
+    border-radius: 6px;
     color: #ffffff;
     font-family: 'Inter', sans-serif;
     transition: border-color 0.3s ease;
 }
 
-/* Ilumina el borde de dorado cuando estás escribiendo */
 .grupo-formulario input:focus, 
 .grupo-formulario textarea:focus {
     outline: none;
     border-color: #e6b800;
 }
 
-.btn-ancho-completo { 
-    width: 100%; 
-}
+.btn-ancho-completo { width: 100%; }
 
 /* =========================================
      FOOTER
@@ -258,59 +246,51 @@ nav a:hover {
 footer {
     background-color: #0a0a0a;
     text-align: center;
-    padding: 50px 20px;
+    padding: 60px 20px;
     border-top: 1px solid #333333;
     color: #b3b3b3;
 }
 
-.redes-sociales {
-    margin-top: 20px;
-}
+.redes-sociales { margin-top: 25px; }
 
 .redes-sociales a {
     color: #b3b3b3;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 15px;
     transition: color 0.3s ease;
 }
 
-.redes-sociales a:hover { 
-    color: #e6b800; 
-}
+.redes-sociales a:hover { color: #e6b800; }
 
 /* =========================================
-   SEPARADORES DE SECCIONES
+   SEPARADORES DE SECCIONES (LÍNEAS LARGAS)
    ========================================= */
 #inicio, 
 #sobre-mi {
-    border-bottom: 1px solid #333333;
+    border-bottom: none; 
+    position: relative;
+}
+
+#inicio::after, 
+#sobre-mi::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85vw; 
+    height: 1px;
+    background-color: #333333;
 }
 
 /* =========================================
-     DISEÑO RESPONSIVO (MEDIA QUERIES)
+     DISEÑO RESPONSIVO
    ========================================= */
 @media (max-width: 768px) {
-    h1 { 
-        font-size: 2.2rem; 
-    }
-    
-    header {
-        flex-direction: column; /* Cambiamos a columna en móviles */
-        padding: 15px;
-    }
-
-    nav ul {
-        margin-top: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-    
-    section { 
-        padding: 60px 20px; 
-    }
-    
-    .seccion-inicio { 
-        padding-top: 100px; 
-    }
+    h1 { font-size: 2.5rem; }
+    header { flex-direction: column; padding: 20px; }
+    nav ul { margin-top: 20px; gap: 15px; }
+    section { padding: 80px 20px; }
+    .seccion-inicio { padding-top: 120px; }
+    .cuadricula-proyectos { grid-template-columns: 1fr; }
 }
