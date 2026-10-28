@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio personal de Víctor, estudiante de desarrollo Full Stack.">
+    <meta name="author" content="Víctor">
+    
+    <meta property="og:title" content="Portfolio de Víctor | Desarrollador Full Stack">
+    <meta property="og:description" content="Explora mis proyectos web y mi progreso en el desarrollo de aplicaciones.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://victorrtierno.github.io/Portfolio---Victor-Tierno/">
+    <title>Portfolio | Víctor</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Víctor<span>.Dev</span></div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="inicio" class="seccion-inicio">
+            <div class="contenido-inicio">
+                <h1>Hola, soy Víctor. <br>Y soy un futuro desarrollador <span class="texto-acento">Full Stack</span>.</h1>
+                <p>Actualmente formándome en tecnologías web, construyendo lógica sólida en el backend y diseños limpios en el frontend.</p>
+                <a href="#proyectos" class="btn-principal">Ver mis proyectos</a>
+            </div>
+        </section>
+
+        <section id="sobre-mi">
+            <h2 class="titulo-seccion">Sobre Mí</h2>
+            <p class="texto-destacado">Estudiante de Desarrollo de Aplicaciones Multiplataforma (DAM) y Data Analytics | ThePower | Futuro desarrollador Full Stack.</p>
+            <p>Me encanta transformar ideas en proyectos funcionales, trabajando tanto en la lógica de servidor como en la interfaz de usuario. Mi objetivo actual es dominar HTML, CSS y Java para crear aplicaciones completas, intuitivas y eficientes. ¡Siempre dispuesto a afrontar un nuevo reto de código!</p>
+        </section>
+
+        <section id="proyectos">
+            <h2 class="titulo-seccion">Mis Proyectos Destacados</h2>
+            <div class="cuadricula-proyectos">
+                
+                <a href="proyectos/proyecto-2ev-grupo-victor" class="enlace-tarjeta">
+                    <article class="tarjeta-proyecto">
+                        <div class="contenedor-imagen">
+                            <img src="img/img1.jpg" alt="Captura de pantalla de la plataforma de visualización de tarjetas musicales" loading="lazy">
+                        </div>
+                        <div class="contenido-tarjeta">
+                            <h3>Página con HTML, CSS y JavaScript</h3>
+                            <p>Plataforma de visualización de tarjetas para conocer cantantes</p>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="proyectos/Reto_XML_HOTEL/" class="enlace-tarjeta">
+                    <article class="tarjeta-proyecto">
+                        <div class="contenedor-imagen">
+                            <img src="img/img1.jpg" alt="Captura de pantalla de la plataforma de visualización de tarjetas musicales" loading="lazy">
+                        </div>
+                        <div class="contenido-tarjeta">
+                            <h3>Plataforma de gestión de habitaciones y reservas de un hotel con JavaFX, Java y XML</h3>
+                            <p>Aplicación Java para consultar la información y el estado de las habitaciones de un hotel ficticio,
+                               con datos cargados desde un archivo XML. Incluye validación de habitaciones inexistentes y gestión de distintos estados 
+                               (disponible, ocupada y en mantenimiento).</p>
+                        </div>
+                    </article>
+                </a>
+
+            </div>
+        </section>
+
+        <section id="contacto" class="seccion-contacto">
+            <h2 class="titulo-seccion">Contáctame</h2>
+            <form action="https://formspree.io/f/xdayyazw" method="POST" class="formulario-moderno">
+                <div class="grupo-formulario">
+                    <label for="nombre">Tu Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Víctor Tierno" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="email">Tu Email</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                </div>
+                <div class="grupo-formulario">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué te puedo ayudar?" required></textarea>
+                </div>
+                <button type="submit" class="btn-principal btn-ancho-completo">Enviar Mensaje</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="logo">Víctor<span>.Dev</span></div>
+        <p>&copy; 2026. Todos los derechos reservados.</p>
+        <div class="redes-sociales">
+            <a href="https://github.com/victorrtierno" target="_blank">GitHub</a> / 
+            <a href="https://www.linkedin.com/in/v%C3%ADctor-tierno-corbaton/" target="_blank">LinkedIn</a> / 
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+</html>
