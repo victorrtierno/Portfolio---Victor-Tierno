@@ -4,9 +4,6 @@ Aplicación de escritorio en JavaFX para consultar las habitaciones de un hotel 
 
 Proyecto académico. Todos los nombres, correos y datos son ficticios.
 
-Captura de la aplicación
-
-<!-- Sustituye la ruta por tu captura real -->
 Funcionalidades
 Carga automática de las habitaciones desde reservas.xml.
 Tabla con Número, Tipo, Capacidad, Precio/noche (€) y Estado.
@@ -70,8 +67,8 @@ Filtrar la tabla por tipo, precio o estado.
 Colorear las filas según el estado de la habitación.
 Autor
 
-Tu nombre - GitHub · LinkedIn
+Víctor Tierno Corbatón - GitHub: https://github.com/victorrtierno · LinkedIn: https://www.linkedin.com/in/v%C3%ADctor-tierno-corbaton
 
 Licencia
 
-Proyecto con fines educativos. Añade aquí la licencia que prefieras (por ejemplo, MIT).
+Proyecto Educativo.
