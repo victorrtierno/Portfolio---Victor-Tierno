@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hotel categoria="4">
+    <nombre>Hotel Sol</nombre>
+    <ciudad>Madrid</ciudad>
+    <habitaciones>
+        <habitacion numero="205" estado="ocupada">
+            <tipo>Doble</tipo>
+            <capacidad>2</capacidad>
+            <precioNoche>120</precioNoche>
+        </habitacion>
+        <habitacion numero="310" estado="libre">
+            <tipo>Individual</tipo>
+            <capacidad>1</capacidad>
+            <precioNoche>80</precioNoche>
+        </habitacion>
+        <habitacion numero="405" estado="libre">
+            <tipo>Suite</tipo>
+            <capacidad>3</capacidad>
+            <precioNoche>200</precioNoche>
+        </habitacion>
+    </habitaciones>
+</hotel>
